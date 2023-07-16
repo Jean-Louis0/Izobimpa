@@ -1,95 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Izobimpa</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>  
-        
-        <!-- burgernav -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- burgernav -->
 
-        <div class="burger-menu">
-            <input type="checkbox" id="burger-toggle" class="burger-toggle">
-            <label for="burger-toggle" class="burger">
-                <span></span>
-            </label>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Playlist</a></li>
-                    <li><a href="#">Spectacles</a></li>
-                    <li><a href="#">Galerie</a></li>
+      <!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
 
-                </ul>
-            </nav>
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#"><li>Galerie</li></a>
+      <a href="#"><li>Spectacles</li></a>
+      <a href="#"><li>Playlist</li></a>
+    </ul>
+  </div>
+</nav>
+      <br />
+      <br />
+      <!-- Image card -->
+
+      <div class="Image-card">
+        <img src="izobimpa.jpg" alt="Izobimpa" />
+
+        <!-- the blueprint layout -->
+
+        <div class="card-content">
+          <h4>Huguette Izobimpa</h4>
+          <p>
+            Slameuse et actrice comédienne originaire de la ville de Bujumbura.
+            <br />
+            Mes textes vous font explorer des thèmes profonds tels que
+            l'identité, l'amour, l'injustice sociale et la condition des femmes.
+          </p>
+          <p>
+            Je milite également pour les droits des femmes et plus spécialement,
+            sensibiliser les gens aux problèmes auxquels les femmes font face
+            dans la société burundaise.
+          </p>
+          <p>
+            Sur scène, j'essaie de captiver mon public en exprimant ma passion
+            avec charisme et en utilisant ma voix profonde pour transmettre des
+            émotions.
+          </p>
+          <p>
+            J'aspire à offrir à mon auditoire une expérience poétique mémorable
+            et à partager des messages universels à travers mes performances en
+            slam.
+          </p>
         </div>
-        <br>
-        <br>
-        <!-- Image card -->
+      </div>
+      <br />
+      <br />
+      <!-- Reviews -->
 
-        <div class="Image-card">
-            <img src="izobimpa.jpg" alt="Izobimpa">
-
-            <!-- the blueprint layout -->
-
-            <div class="card-content">
-                <h4>Huguette Izobimpa</h4>
-                <p>Slameuse et actrice comédienne originaire de la ville de Bujumbura. <br>
-                    Mes textes vous font explorer des thèmes profonds tels que l'identité, l'amour, l'injustice sociale et la condition des femmes.</p>
-                <p>Je milite également pour les droits des femmes et plus spécialement, sensibiliser les gens aux problèmes auxquels les femmes font face dans la société burundaise.</p>
-                <p>Sur scène, j'essaie de captiver mon public en exprimant ma passion avec charisme et en utilisant ma voix profonde pour transmettre des émotions.</p>
-                <p>J'aspire à offrir à mon auditoire une expérience poétique mémorable et à partager des messages universels à travers mes performances en slam.</p>
-            </div>
+      <div class="reviews">
+        <div class="review">
+          <div class="content">
+            <h4>LEZARTS urbains</h4>
+            <p>
+              Huguette Izobimpa est déjà une grande amoureuse de son public.
+            </p>
+            <p>
+              Chacun de ses mots espère résonner et toucher à l'écoute. Petite
+              nouvelle de la scène slam belge.
+            </p>
+            <p>
+              Bien qu'étant slameuse (et à l’origine le slam c’est en acapella),
+              Huguette a toujours aimé la musique, c’est pourquoi pour chaque
+              morceau elle a créé un univers musical dans lequel il lui serait
+              facile d’inviter toute personne.
+            </p>
+            <p>
+              Touchante, sincère, ancrée, mais tout autant pétillante, voilà une
+              artiste à suivre de très près!
+            </p>
+            <a href="#">Lire Plus</a>
+          </div>
         </div>
-        <br>
-        <br>
-        <!-- Reviews -->
-        
-        <div class="reviews">
-            <div class="review">
-                <div class="content">
-                    <h4>LEZARTS urbains</h4>
-                    <p>Huguette Izobimpa est déjà une grande amoureuse de son public.</p>
-                    <p>Chacun de ses mots espère résonner et toucher à l'écoute. Petite nouvelle de la scène slam belge.</p>
-                    <p>Bien qu'étant slameuse (et à l’origine le slam c’est en acapella), Huguette a toujours aimé la musique, c’est pourquoi pour chaque morceau elle a créé un univers musical dans lequel il lui serait facile d’inviter toute personne.</p>
-                    <p>Touchante, sincère, ancrée, mais tout autant pétillante, voilà une artiste à suivre de très près!</p>
-                    <a href="#">Lire Plus</a>
-                </div>
-            </div>
-            <div class="review">
-                <div class="content">
-                    <h4>LEZARTS urbains</h4>
-                    <p>Huguette Izobimpa est déjà une grande amoureuse de son public.</p>
-                    <p>Chacun de ses mots espère résonner et toucher à l'écoute. Petite nouvelle de la scène slam belge.</p>
-                    <p>Bien qu'étant slameuse (et à l’origine le slam c’est en acapella), Huguette a toujours aimé la musique, c’est pourquoi pour chaque morceau elle a créé un univers musical dans lequel il lui serait facile d’inviter toute personne.</p>
-                    <p>Touchante, sincère, ancrée, mais tout autant pétillante, voilà une artiste à suivre de très près!</p>
-                    <a href="#">Lire Plus</a>
-                </div>
-            </div>
-            <div class="review">
-                <div class="content">
-                    <h4>LEZARTS urbains</h4>
-                    <p>Huguette Izobimpa est déjà une grande amoureuse de son public.</p>
-                    <p>Chacun de ses mots espère résonner et toucher à l'écoute. Petite nouvelle de la scène slam belge.</p>
-                    <p>Bien qu'étant slameuse (et à l’origine le slam c’est en acapella), Huguette a toujours aimé la musique, c’est pourquoi pour chaque morceau elle a créé un univers musical dans lequel il lui serait facile d’inviter toute personne.</p>
-                    <p>Touchante, sincère, ancrée, mais tout autant pétillante, voilà une artiste à suivre de très près!</p>
-                    <a href="#">Lire Plus</a>
-                </div>
-            </div>
+        <div class="review">
+          <div class="content">
+            <h4>LEZARTS urbains</h4>
+            <p>
+              Huguette Izobimpa est déjà une grande amoureuse de son public.
+            </p>
+            <p>
+              Chacun de ses mots espère résonner et toucher à l'écoute. Petite
+              nouvelle de la scène slam belge.
+            </p>
+            <p>
+              Bien qu'étant slameuse (et à l’origine le slam c’est en acapella),
+              Huguette a toujours aimé la musique, c’est pourquoi pour chaque
+              morceau elle a créé un univers musical dans lequel il lui serait
+              facile d’inviter toute personne.
+            </p>
+            <p>
+              Touchante, sincère, ancrée, mais tout autant pétillante, voilà une
+              artiste à suivre de très près!
+            </p>
+            <a href="#">Lire Plus</a>
+          </div>
         </div>
-        
+        <div class="review">
+          <div class="content">
+            <h4>LEZARTS urbains</h4>
+            <p>
+              Huguette Izobimpa est déjà une grande amoureuse de son public.
+            </p>
+            <p>
+              Chacun de ses mots espère résonner et toucher à l'écoute. Petite
+              nouvelle de la scène slam belge.
+            </p>
+            <p>
+              Bien qu'étant slameuse (et à l’origine le slam c’est en acapella),
+              Huguette a toujours aimé la musique, c’est pourquoi pour chaque
+              morceau elle a créé un univers musical dans lequel il lui serait
+              facile d’inviter toute personne.
+            </p>
+            <p>
+              Touchante, sincère, ancrée, mais tout autant pétillante, voilà une
+              artiste à suivre de très près!
+            </p>
+            <a href="#">Lire Plus</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div id="contact-us">
+          <p>Contactez-nous</p>
+      
+
+          <div id="sm">
+              <p>+32 467 38 03 93</p>
+              <a class="ig" href="#">
+                  <i class="fab fa-instagram"></i>
+              </a>
+
+              <a class="fb" href="#">
+                  <i class="fab fa-facebook"></i>
+              </a>
+          </div>
+      </div>
+
+      <div id="company-name">
+          <h3>Izobimpa</h3>
+      </div>
+      
+      <div id="quick-links">
+          <h4>Quick Links</h4>
+          <a href="#">Galerie</a>
+          <a href="#">Spectacles</a>
+          <a href="#">Playlist</a>
+      </div>
+      </div>
+
+
+
+
     </main>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
-        <script>
-            VanillaTilt.init(document.querySelectorAll(".review"), {
-                max: 10,
-                speed: 200,
-                glare:true,
-                "max-glare": 0.3,
-            });
-        </script>
-</body>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".review"), {
+        max: 10,
+        speed: 200,
+        glare: true,
+        "max-glare": 0.3,
+      });
+    </script>
+
+<script src="https://kit.fontawesome.com/258cdc87ab.js" crossorigin="anonymous"></script>
+  </body>
 </html>

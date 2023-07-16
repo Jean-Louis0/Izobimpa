@@ -1,343 +1,376 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    background: linear-gradient(
-      50deg,
-      #EDB13F 0%,
-      #F0B446 25%,
-      #E5A742 75%,
-      #CB8B34 100%
-    );
-
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(
+    50deg,
+    #edb13f 0%,
+    #f0b446 25%,
+    #e5a742 75%,
+    #cb8b34 100%
+  );
 }
 
 .Image-card {
-    display: flex;
-    background: transparent;
-    border-radius: 10px;
-    justify-content: center;
-     align-items: center;
-     position: relative;
+  display: flex;
+  background: transparent;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.Image-card img{
-    max-width: 500px;
-    position: absolute;
-    top: 15px;
-    left: 390px;
-    box-shadow: 0 5px 5px #666666;
-    transition: transform 0.5s ease;
-    border-radius: 10px;
+.Image-card img {
+  max-width: 500px;
+  position: absolute;
+  top: 15px;
+  left: 390px;
+  box-shadow: 0 5px 5px #666666;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
 }
 .Image-card img:hover {
-    transform: scale(1.01);
-}
-
-.card-content{
-    margin-left: 650px;
-    font-size: large;
-    font-weight: 540;
-    width: 390px;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff1a;
-    color: #000000;
-    line-height: 20px;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 5px 10px #00000033;
-    font-weight: 500;
-    transition: transform 0.5s ease;
-    backdrop-filter: blur(5px);
-}
-
-.card-content:hover{
-    transform: scale(1.01);
-    font-size: 1.2em;
-    transition: transform 0.5s ease;
-}
-.card-content p{
-    margin-bottom: -15px;
-    
-    
-}
-
-.card-content h4{
-    text-align: center;
-}
-
-.reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    background: #800020;
-}
-
-.reviews .review{
-    position: relative;
-    width: 500px;
-    height:400px;
-    margin: 30px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: #ffffff1a;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    backdrop-filter: blur(5px);
-}
-
-.reviews .review .content {
-    padding: 20px;
-    text-align: center;
-    transform: translateY(50px);
-    transition: 0.5s;
-}
-
-.reviews .review:hover .content {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-.reviews .review .content h4{
-    right: 40px;    
-    color: #000000;
-    z-index: 1;
-    transform: translateY(10px);
-    transition: 0.5s;
-}
-.reviews .review:hover .content h4{
-    font-size: 70px;
-    position: absolute;
-    top: -80px;
-    right: 30px;
-    opacity: 0.2;
-    color: #000000;
-    z-index: 1;
-    pointer-events: none;
-    transform: translateY(10px);
-
-}
-.reviews .review .content P{
-    font-size: 17px;
-    color: #fff;
-    font-weight: 300;
-}
-
-.reviews .review .content a{
-    position: relative; 
-    padding: 8px 20px;
-    margin-top: 30px;
-    background: #ffffff1a;
-    color: #fff;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 5px 15px #00000033;
-    transform: translateY(100px);
-    transition: 0.5s;
-}
-
-.reviews .review .content a:hover{
-    background: linear-gradient(#EDB13F 0%, #F0B446 25%,#E5A742 75%, #CB8B34 100%);
-    transform: translateY(0px);
-    color: #000000;
-    opacity: 1;
-}
-
-.burger-menu {
-    position: fixed;
-    left: 30px;
-    top: 30px;
-    z-index: 100;
-}
-
-.burger-toggle {
-    display: none;
-}
-
-.burger-toggle:checked + .burger span {
-    background-color: #fff;
-    opacity: 0;
-}
-
-.burger-toggle:checked + .burger:before {
-    transform: translateY(10px) rotate(50deg);
-}
-
-.burger-toggle:checked + .burger:after {
-    transform: translateY(-10px) rotate(-50deg);
-}
-
-/* .burger-toggle:checked ~ .menu {
-    transform: translateX(0%);
-} */
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.burger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transition: background-color 0.3s ease;
-}
-
-.burger:before,
-.burger:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transition: transform 0.3s ease;
-}
-
- .menu {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    transition: transform 0.3s ease;
-}
-/*
-.menu ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.menu li {
-    margin-bottom: 20px;
-}
-
-.menu a {
-    display: block;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    white-space: nowrap; Added
-} */
-
-/* .menu a:hover {
-    color: #800020;
-} */
-
-
-/* .burger-nav {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-}
-
-.burger-nav .toggler {
-    display: none;
-}
-
-.burger-nav .burger {
-    width: 40px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-}
-
-.burger-nav .burger div {
-    position: absolute;
-    background-color: #333;
-    height: 5px;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.burger-nav .nav {
-    width: 200px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: all 0.3s ease;
-}
-
-.burger-nav .menu {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.burger-nav .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.burger-nav .menu ul li {
-    margin-bottom: 20px;
-}
-
-.burger-nav .menu ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: all 0.3s ease;
-}
-
-.burger-nav .menu ul li a:hover {
-    color: #f7f7f7;
-}
-
-.image-card {
-    background: transparent;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    max-width: 800px;
-    margin: auto;
-}
-
-.image-card img {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+  transform: scale(1.01);
 }
 
 .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #333;
-    padding: 20px;
+  margin-left: 650px;
+  font-size: large;
+  font-weight: 540;
+  width: 390px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff1a;
+  color: #000000;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 10px #00000033;
+  font-weight: 500;
+  transition: transform 0.5s ease;
+  backdrop-filter: blur(5px);
+}
+
+.card-content:hover {
+  transform: scale(1.01);
+  font-size: 1.2em;
+  transition: transform 0.5s ease;
+}
+.card-content p {
+  margin-bottom: -15px;
 }
 
 .card-content h4 {
-    margin-bottom: 10px;
+  text-align: center;
 }
 
-.card-content p {
-    margin-bottom: 10px;
-} */
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #800020;
+}
+
+.reviews .review {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: #ffffff1a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  backdrop-filter: blur(5px);
+}
+
+.reviews .review .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.reviews .review:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.reviews .review .content h4 {
+  right: 40px;
+  color: #000000;
+  z-index: 1;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.reviews .review:hover .content h4 {
+  font-size: 70px;
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  opacity: 0.2;
+  color: #000000;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+.reviews .review .content P {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.reviews .review .content a {
+  position: relative;
+  padding: 8px 20px;
+  margin-top: 30px;
+  background: #ffffff1a;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px #00000033;
+  transform: translateY(100px);
+  transition: 0.5s;
+}
+
+.reviews .review .content a:hover {
+  background: linear-gradient(
+    #edb13f 0%,
+    #f0b446 25%,
+    #e5a742 75%,
+    #cb8b34 100%
+  );
+  transform: translateY(0px);
+  color: #000000;
+  opacity: 1;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 100px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 100px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+.footer {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  background-color: #E9DCC9;
+  align-items: center;
+  height: 200px;
+  justify-content: space-around;
+}
+
+#contact-us p{
+  white-space: pre-line;
+  background-color: #E9DCC9;
+  font-size: x-large;
+  
+}
+
+#sm{
+  background-color: #E9DCC9;
+
+}
+
+#sm p{
+  font-size: large;
+}
+
+#sm a{
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  margin: 5px;
+}
+.ig {
+  background-color: #E9DCC9;
+}
+
+.ig:hover {
+  -webkit-text-fill-color: #5F9EA0; 
+}
+
+.fb {
+  background-color: #E9DCC9;
+}
+
+.fb:hover {
+  color: #5F9EA0;
+  -webkit-text-fill-color: #5F9EA0;
+}
+
+
+
+#company-name{
+  background-color: #E9DCC9;
+}
+
+#company-name h3{
+  background-color: #E9DCC9;
+  font-size: xx-large;
+}
+
+#quick-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#quick-links h4{
+  background-color: #E9DCC9;
+  color: #1B1212;
+  font-size: large;
+}
+#quick-links a{
+  background-color: #E9DCC9;
+  color: #1B1212;
+  text-decoration: none;
+  font-size: larger;
+}
+
+#quick-links a:hover{
+  color: #5F9EA0;
+}
